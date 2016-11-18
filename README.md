@@ -10,7 +10,10 @@ with a File
 Example configuration: 
 
 ```
-apply plugin: "no.systemfabrikken.clairplugin"
+plugins {
+  id "no.systemfabrikken.clairplugin" version "1.0"
+}
+
 clair {
     imageName = "your/image"
     tag = "1.0"
@@ -22,3 +25,5 @@ clair {
     htmlReportFile = new File(project.projectDir, "docker-scan.html")
 }
 ```
+
+[Gradle plugin](https://plugins.gradle.org/plugin/no.systemfabrikken.clairplugin)
