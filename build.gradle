@@ -1,0 +1,63 @@
+plugins {
+    id 'groovy'
+    id "com.gradle.plugin-publish" version "0.9.6"
+    id "maven"
+    id "no.systemfabrikken.githubreleaseplugin" version "2.1"
+    id 'java-gradle-plugin'
+}
+
+apply plugin: 'no.systemfabrikken.githubreleaseplugin'
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '3.2'
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
+    compile group: "com.mashape.unirest", name: "unirest-java", version: "1.4.9" // for clair scan
+
+    testCompile gradleTestKit()
+    testCompile(group: 'org.spockframework', name: 'spock-core', version: '1.0-groovy-2.4') {
+        exclude module: 'groovy-all'
+    }
+}
+
+pluginBundle {
+    description = 'Gradle plugin for Clair scans'
+    website = 'https://github.com/systemfabrikken/gradle-clair-plugin'
+    vcsUrl = 'https://github.com/systemfabrikken/gradle-clair-plugin'
+    tags = ['clair', 'docker', 'security']
+    plugins {
+        clairplugin {
+            id = 'no.systemfabrikken.clairplugin'
+            displayName = 'Gradle Clair scan plugin'
+        }
+    }
+}
+
+//githubrelease {
+//    pathToLocalRepo = project.rootDir.absolutePath
+//    githubRepo = "systemfabrikken/${project.name}"
+//    githubAuthUsername = githubUsername ?: "$System.env.GITHUB_USER"
+//    githubAuthToken = githubToken ?: "$System.env.GITHUB_TOKEN"
+//}
+
+
+version = "1.0"
+group = "no.systemfabrikken.clairplugin"
+
+//kjør gradlew uploadArchives for å bygge jar til lokalt repo
+//legge dette repo til i prosjektet som bruker pluginet for at pluginet skal lastes derfra:
+// buildscript { repositories { maven {url uri('file:///Users/kai/Dev/githome/gradle-plugins/build/mvnrepo')} } }
+group = "gradle.plugin.no.systemfabrikken.clairplugin"
+uploadArchives {
+    repositories.mavenDeployer {
+        repository url: 'file:///Users/oddcb/prosjekter/gradle-clair-plugin/build/mvnrepo' // this is your local maven repo
+    }
+}
