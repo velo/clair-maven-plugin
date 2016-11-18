@@ -11,7 +11,7 @@ Example configuration:
 
 ```
 plugins {
-  id "no.systemfabrikken.clairplugin" version "1.0"
+  id "no.systemfabrikken.clairplugin" version "1.0.1"
 }
 
 clair {
@@ -25,5 +25,7 @@ clair {
     htmlReportFile = new File(project.projectDir, "docker-scan.html")
 }
 ```
+
+[Example output](https://htmlpreview.github.io/?https://github.com/systemfabrikken/gradle-clair-plugin/blob/master/report-example.html)
 
 [Gradle plugin](https://plugins.gradle.org/plugin/no.systemfabrikken.clairplugin)
