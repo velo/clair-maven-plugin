@@ -2,7 +2,7 @@ Submit a Docker image to Clair for scanning
 --
 
 This is a simple plugin that retrieves the image manifest for a docker image from a
-docker repository, resolves the layers and submit them to Clair for scanning. 
+docker repository, resolves the layers and submit them to [Clair](https://github.com/coreos/clair/) for scanning. 
 
 When all layers have been submitted a html report is produces if the plugin is configured
 with a File
