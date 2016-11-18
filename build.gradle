@@ -49,15 +49,15 @@ pluginBundle {
 //}
 
 
-version = "1.0"
+version = "1.0.1"
 group = "no.systemfabrikken.clairplugin"
 
-//kjør gradlew uploadArchives for å bygge jar til lokalt repo
-//legge dette repo til i prosjektet som bruker pluginet for at pluginet skal lastes derfra:
-// buildscript { repositories { maven {url uri('file:///Users/kai/Dev/githome/gradle-plugins/build/mvnrepo')} } }
-group = "gradle.plugin.no.systemfabrikken.clairplugin"
-uploadArchives {
-    repositories.mavenDeployer {
-        repository url: 'file:///Users/oddcb/prosjekter/gradle-clair-plugin/build/mvnrepo' // this is your local maven repo
-    }
-}
+////kjør gradlew uploadArchives for å bygge jar til lokalt repo
+////legge dette repo til i prosjektet som bruker pluginet for at pluginet skal lastes derfra:
+//// buildscript { repositories { maven {url uri('file:///Users/kai/Dev/githome/gradle-plugins/build/mvnrepo')} } }
+//group = "gradle.plugin.no.systemfabrikken.clairplugin"
+//uploadArchives {
+//    repositories.mavenDeployer {
+//        repository url: 'file:///Users/oddcb/prosjekter/gradle-clair-plugin/build/mvnrepo' // this is your local maven repo
+//    }
+//}
