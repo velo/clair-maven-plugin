@@ -52,7 +52,7 @@ public class Clair {
 
     public def getVulnerabilities(DockerRegistry.ImageManifest manifest) {
         JsonSlurper slurper = new JsonSlurper()
-        def lagMedSårbarheter = []
+        Map stats = Vulnerabilities.emptyStats()
 
         def json = slurper.parseText(Unirest.get("http://${clairHost}:${clairPort}/v1/layers/${manifest.layers.last().name}?vulnerabilities").asString().body)
 
@@ -72,11 +72,37 @@ public class Clair {
                 }).findAll({ it.Vulnerabilities })
             }
 
+            featuresWithVulnerabilities.each {
+                it.Vulnerabilities.each { v ->
+                    stats[v.Severity] += 1
+                }
+            }
 
-
-            return featuresWithVulnerabilities
+            return new Vulnerabilities(stats: stats, reportedSeverities: reportSeverities, featuresWithVulnerabilities: featuresWithVulnerabilities)
         }
 
-        return []
+        return new Vulnerabilities()
+    }
+
+    public static class Vulnerabilities {
+
+        Map stats = emptyStats()
+        List reportedSeverities = []
+        List featuresWithVulnerabilities = []
+
+        static Map emptyStats() {
+            return new TreeMap(["High": 0, "Medium": 0, "Low": 0, "Unknown": 0, "Negligible": 0])
+        }
+
+
+        @Override
+        public String toString() {
+            final StringBuilder sb = new StringBuilder("Vulnerabilities{");
+            sb.append("stats=").append(stats);
+            sb.append(", reportedSeverities=").append(reportedSeverities);
+            sb.append(", featuresWithVulnerabilities=").append(featuresWithVulnerabilities);
+            sb.append('}');
+            return sb.toString();
+        }
     }
 }
