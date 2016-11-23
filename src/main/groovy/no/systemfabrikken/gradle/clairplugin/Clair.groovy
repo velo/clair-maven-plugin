@@ -58,6 +58,8 @@ public class Clair {
         def clairUrl = "http://${clairHost}:${clairPort}/v1/layers/${lastLayer}?vulnerabilities"
         def json = slurper.parseText(Unirest.get(clairUrl).asString().body)
 
+        def references = new Vulnerabilities.References(clairLayerReference: lastLayer, clairLayerUrl: clairUrl, imageName: manifest.repo, imageTag: manifest.tag)
+
         if (json.Error) {
             println json
             return
@@ -80,11 +82,11 @@ public class Clair {
                 }
             }
 
-            def references = new Vulnerabilities.References(clairLayerReference: lastLayer, clairLayerUrl: clairUrl, imageName: manifest.repo, imageTag: manifest.tag)
+
             return new Vulnerabilities(stats: stats, reportedSeverities: reportSeverities, featuresWithVulnerabilities: featuresWithVulnerabilities, references: references)
         }
 
-        return new Vulnerabilities()
+        return new Vulnerabilities(references: references)
     }
 
     public static class Vulnerabilities {

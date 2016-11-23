@@ -32,7 +32,7 @@ public class HtmlReportGenerator {
             body {
                 h1 "${stats.values().sum(0)} Vulnerabilities"
                 div {
-                    stats.collect { key, value -> span "${key}: ${value} " }
+                    stats.collect { key, value -> span(class: key.toLowerCase(), "${key}: ${value} ")}
                 }
 
                 div {
