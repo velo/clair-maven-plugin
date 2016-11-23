@@ -7,8 +7,10 @@ public class HtmlReportGenerator {
     private final List features
     private final Map stats
     private final StringWriter writer
+    private final Clair.Vulnerabilities vulnerabilities
 
     public HtmlReportGenerator(Clair.Vulnerabilities vulnerabilities) {
+        this.vulnerabilities = vulnerabilities
         this.stats = vulnerabilities.stats
         this.features = vulnerabilities.featuresWithVulnerabilities.sort { it.Name }
         this.writer = new StringWriter()
@@ -32,6 +34,29 @@ public class HtmlReportGenerator {
                 div {
                     stats.collect { key, value -> span "${key}: ${value} " }
                 }
+
+                div {
+                    p {
+                        b "Image name: "
+                        mkp.yield("${vulnerabilities.references.imageName}")
+                    }
+
+                    p {
+                        b "Image tag: "
+                        mkp.yield("${vulnerabilities.references.imageTag}")
+                    }
+
+                    p {
+                        b "Clair (last layer) name: "
+                        mkp.yield("${vulnerabilities.references.clairLayerReference}")
+                    }
+
+                    p {
+                        b "Clair (last layer) URL: "
+                        a(href: "${vulnerabilities.references.clairLayerUrl}", vulnerabilities.references.clairLayerUrl)
+                    }
+                }
+
                 features.collect { f ->
                     div(class: "feature") {
                         h2(style: "border-bottom: 1px solid black;", "Feature/package ${f.Name}")

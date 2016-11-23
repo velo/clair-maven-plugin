@@ -54,7 +54,9 @@ public class Clair {
         JsonSlurper slurper = new JsonSlurper()
         Map stats = Vulnerabilities.emptyStats()
 
-        def json = slurper.parseText(Unirest.get("http://${clairHost}:${clairPort}/v1/layers/${manifest.layers.last().name}?vulnerabilities").asString().body)
+        def lastLayer = manifest.lastLayer().name
+        def clairUrl = "http://${clairHost}:${clairPort}/v1/layers/${lastLayer}?vulnerabilities"
+        def json = slurper.parseText(Unirest.get(clairUrl).asString().body)
 
         if (json.Error) {
             println json
@@ -78,7 +80,8 @@ public class Clair {
                 }
             }
 
-            return new Vulnerabilities(stats: stats, reportedSeverities: reportSeverities, featuresWithVulnerabilities: featuresWithVulnerabilities)
+            def references = new Vulnerabilities.References(clairLayerReference: lastLayer, clairLayerUrl: clairUrl, imageName: manifest.repo, imageTag: manifest.tag)
+            return new Vulnerabilities(stats: stats, reportedSeverities: reportSeverities, featuresWithVulnerabilities: featuresWithVulnerabilities, references: references)
         }
 
         return new Vulnerabilities()
@@ -86,23 +89,44 @@ public class Clair {
 
     public static class Vulnerabilities {
 
+        References references
         Map stats = emptyStats()
         List reportedSeverities = []
         List featuresWithVulnerabilities = []
 
         static Map emptyStats() {
-            return new TreeMap(["High": 0, "Medium": 0, "Low": 0, "Unknown": 0, "Negligible": 0])
+            return ["High": 0, "Medium": 0, "Low": 0, "Unknown": 0, "Negligible": 0]
         }
-
 
         @Override
         public String toString() {
             final StringBuilder sb = new StringBuilder("Vulnerabilities{");
-            sb.append("stats=").append(stats);
+            sb.append("references=").append(references);
+            sb.append(", stats=").append(stats);
             sb.append(", reportedSeverities=").append(reportedSeverities);
             sb.append(", featuresWithVulnerabilities=").append(featuresWithVulnerabilities);
             sb.append('}');
             return sb.toString();
+        }
+
+
+        public static class References {
+            String clairLayerReference
+            String clairLayerUrl
+            String imageName
+            String imageTag
+
+
+            @Override
+            public String toString() {
+                final StringBuilder sb = new StringBuilder("References{");
+                sb.append("clairReference='").append(clairLayerReference).append('\'');
+                sb.append(", clairUrl='").append(clairLayerUrl).append('\'');
+                sb.append(", imageName='").append(imageName).append('\'');
+                sb.append(", imageTag='").append(imageTag).append('\'');
+                sb.append('}');
+                return sb.toString();
+            }
         }
     }
 }

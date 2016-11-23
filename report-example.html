@@ -1,16 +1,102 @@
 <html>
 <head>
-    <style>body { font-family: sans-serif; margin: 0 auto; max-width: 1000px;} .feature { margin: 5px 0; padding: 0 10px; border-left: 10px solid #ff5555;} .high {color: #ff5555;}</style>
+    <style>body { font-family: sans-serif; margin: 0 auto; max-width: 1000px; } .feature { margin: 5px 0; padding: 0 20px; border-left: 10px solid #ff5555; } .feature .details { margin-bottom: 10px;} .high {font-weight: bold; color: #ff5555; }.vulnerability { padding: 5px; }.vulnerability:last-child { padding: 0; }.even { background: #eee; }</style>
 </head>
 <body>
-<h1>Vulnerabilities</h1>
+<h1>48 Vulnerabilities</h1>
+<div>
+    <span>High: 5 </span>
+    <span>Medium: 8 </span>
+    <span>Low: 4 </span>
+    <span>Unknown: 8 </span>
+    <span>Negligible: 23 </span>
+</div>
+<div>
+    <p>
+        <b>Image name: </b>base/debian-jessie
+    </p>
+    <p>
+        <b>Image tag: </b>12.2211161148.7902b1d
+    </p>
+    <p>
+        <b>Clair (last layer) name: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+    </p>
+    <p>
+        <b>Clair (last layer) URL: </b>
+        <a href='http://localhost:6060/v1/layers/base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d?vulnerabilities'>http://localhost:6060/v1/layers/base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d?vulnerabilities</a>
+    </p>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package apt</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1.0.9.8.3
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2011-3374</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2011-3374'>https://security-tracker.debian.org/tracker/CVE-2011-3374</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package audit</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1:2.4-1
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2015-5186</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-5186'>https://security-tracker.debian.org/tracker/CVE-2015-5186</a>
+            </p>
+        </div>
+    </div>
+</div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package bash</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 4.3-11</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>4.3-11
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-7543</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -18,11 +104,23 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7543'>https://security-tracker.debian.org/tracker/CVE-2016-7543</a>
-            </div>
+            </p>
         </div>
-        <div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2016-0634</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-0634'>https://security-tracker.debian.org/tracker/CVE-2016-0634</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-9401</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -30,19 +128,59 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-9401'>https://security-tracker.debian.org/tracker/CVE-2016-9401</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package bzip2</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1.0.6-7
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-3189</h3>
+            <div class='low'>Severity: Low</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>Use-after-free vulnerability in bzip2recover in bzip2 1.0.6 allows remote attackers to cause a denial of service (crash) via a crafted bzip2 file, related to block ends set to before the start of the block.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-3189'>https://security-tracker.debian.org/tracker/CVE-2016-3189</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package coreutils</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 8.23-4</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>8.23-4
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-2781</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -50,19 +188,67 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-2781'>https://security-tracker.debian.org/tracker/CVE-2016-2781</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package cryptsetup</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2:1.6.6-5
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-4484</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
             </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-4484'>https://security-tracker.debian.org/tracker/CVE-2016-4484</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package curl</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 7.38.0-4+deb8u5</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>7.38.0-4+deb8u5
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-8625</h3>
+            <div class='unknown'>Severity: Unknown</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-8625'>https://security-tracker.debian.org/tracker/CVE-2016-8625</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2016-7141</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -74,23 +260,11 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7141'>https://security-tracker.debian.org/tracker/CVE-2016-7141</a>
-            </div>
+            </p>
         </div>
-        <div>
-            <h3>Name: CVE-2016-8625</h3>
-            <div class='unknown'>Severity: Unknown</div>
-            <div>
-            <span>
-              <b>No fix available</b>
-            </span>
-            </div>
-            <div>
-                <a href='https://security-tracker.debian.org/tracker/CVE-2016-8625'>https://security-tracker.debian.org/tracker/CVE-2016-8625</a>
-            </div>
-        </div>
-        <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-7167</h3>
             <div class='high'>Severity: High</div>
             <div style='max-width: 500px;'>
@@ -102,19 +276,43 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7167'>https://security-tracker.debian.org/tracker/CVE-2016-7167</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2016-3739</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The (1) mbed_connect_step1 function in lib/vtls/mbedtls.c and (2) polarssl_connect_step1 function in lib/vtls/polarssl.c in cURL and libcurl before 7.49.0, when using SSLv3 or making a TLS connection to a URL that uses a numerical IP address, allow remote attackers to spoof servers via an arbitrary valid certificate.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-3739'>https://security-tracker.debian.org/tracker/CVE-2016-3739</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package gcc-4.9</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 4.9.2-10</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>4.9.2-10
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2015-5276</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -126,19 +324,39 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2015-5276'>https://security-tracker.debian.org/tracker/CVE-2015-5276</a>
-            </div>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package glibc</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 2.19-18+deb8u6</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2.19-18+deb8u6
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2015-5180</h3>
+            <div class='low'>Severity: Low</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-5180'>https://security-tracker.debian.org/tracker/CVE-2015-5180</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2014-9761</h3>
             <div class='high'>Severity: High</div>
             <div style='max-width: 500px;'>
@@ -150,19 +368,75 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2014-9761'>https://security-tracker.debian.org/tracker/CVE-2014-9761</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2010-4756</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The glob implementation in the GNU C Library (aka glibc or libc6) allows remote authenticated users to cause a denial of service (CPU and memory consumption) via crafted glob expressions that do not match any pathnames, as demonstrated by glob expressions in STAT commands to an FTP daemon, a different vulnerability than CVE-2010-2632.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2010-4756'>https://security-tracker.debian.org/tracker/CVE-2010-4756</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2010-4051</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (application crash) via a regular expression containing adjacent bounded repetitions that bypass the intended RE_DUP_MAX limitation, as demonstrated by a {10,}{10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD, related to a "RE_DUP_MAX overflow."</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2010-4051'>https://security-tracker.debian.org/tracker/CVE-2010-4051</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2010-4052</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>Stack consumption vulnerability in the regcomp implementation in the GNU C Library (aka glibc or libc6) through 2.11.3, and 2.12.x through 2.12.2, allows context-dependent attackers to cause a denial of service (resource exhaustion) via a regular expression containing adjacent repetition operators, as demonstrated by a {10,}{10,}{10,}{10,} sequence in the proftpd.gnu.c exploit for ProFTPD.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2010-4052'>https://security-tracker.debian.org/tracker/CVE-2010-4052</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package gnutls28</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 3.3.8-6+deb8u3</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>3.3.8-6+deb8u3
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-7444</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -174,11 +448,11 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7444'>https://security-tracker.debian.org/tracker/CVE-2016-7444</a>
-            </div>
+            </p>
         </div>
-        <div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2011-3389</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -190,35 +464,27 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2011-3389'>https://security-tracker.debian.org/tracker/CVE-2011-3389</a>
-            </div>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package icu</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 52.1-8+deb8u3</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
+    <div class='details'>
         <div>
-            <h3>Name: CVE-2016-6293</h3>
-            <div class='high'>Severity: High</div>
-            <div style='max-width: 500px;'>
-                <h4>Description</h4>
-                <p>The uloc_acceptLanguageFromHTTP function in common/uloc.cpp in International Components for Unicode (ICU) through 57.1 for C/C++ does not ensure that there is a '\0' character at the end of a certain temporary array, which allows remote attackers to cause a denial of service (out-of-bounds read) or possibly have unspecified other impact via a call with a long httpAcceptLanguage argument.</p>
-            </div>
-            <div>
-            <span>
-              <b>No fix available</b>
-            </span>
-            </div>
-            <div>
-                <a href='https://security-tracker.debian.org/tracker/CVE-2016-6293'>https://security-tracker.debian.org/tracker/CVE-2016-6293</a>
-            </div>
+            <b>Namespace: </b>debian:8
         </div>
         <div>
+            <b>Version: </b>52.1-8+deb8u3
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2015-4844</h3>
             <div class='high'>Severity: High</div>
             <div style='max-width: 500px;'>
@@ -230,27 +496,27 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2015-4844'>https://security-tracker.debian.org/tracker/CVE-2015-4844</a>
-            </div>
+            </p>
         </div>
-        <div>
-            <h3>Name: CVE-2015-2632</h3>
-            <div class='medium'>Severity: Medium</div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2016-6293</h3>
+            <div class='high'>Severity: High</div>
             <div style='max-width: 500px;'>
                 <h4>Description</h4>
-                <p>Unspecified vulnerability in Oracle Java SE 6u95, 7u80, and 8u45 allows remote attackers to affect confidentiality via unknown vectors related to 2D.</p>
+                <p>The uloc_acceptLanguageFromHTTP function in common/uloc.cpp in International Components for Unicode (ICU) through 57.1 for C/C++ does not ensure that there is a '\0' character at the end of a certain temporary array, which allows remote attackers to cause a denial of service (out-of-bounds read) or possibly have unspecified other impact via a call with a long httpAcceptLanguage argument.</p>
             </div>
             <div>
             <span>
               <b>No fix available</b>
             </span>
             </div>
-            <div>
-                <a href='https://security-tracker.debian.org/tracker/CVE-2015-2632'>https://security-tracker.debian.org/tracker/CVE-2015-2632</a>
-            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-6293'>https://security-tracker.debian.org/tracker/CVE-2016-6293</a>
+            </p>
         </div>
-        <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-7415</h3>
             <div class='high'>Severity: High</div>
             <div style='max-width: 500px;'>
@@ -262,35 +528,75 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7415'>https://security-tracker.debian.org/tracker/CVE-2016-7415</a>
-            </div>
+            </p>
         </div>
-    </div>
-</div>
-<div class='feature'>
-    <h2 style='border-bottom: 1px solid black;'>Feature/package krb5</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 1.12.1+dfsg-19+deb8u2</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
-        <div>
-            <h3>Name: CVE-2016-3120</h3>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2015-2632</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
                 <h4>Description</h4>
-                <p>The validate_as_request function in kdc_util.c in the Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) before 1.13.6 and 1.4.x before 1.14.3, when restrict_anonymous_to_tgt is enabled, uses an incorrect client data structure, which allows remote authenticated users to cause a denial of service (NULL pointer dereference and daemon crash) via an S4U2Self request.</p>
+                <p>Unspecified vulnerability in Oracle Java SE 6u95, 7u80, and 8u45 allows remote attackers to affect confidentiality via unknown vectors related to 2D.</p>
             </div>
             <div>
             <span>
               <b>No fix available</b>
             </span>
             </div>
-            <div>
-                <a href='https://security-tracker.debian.org/tracker/CVE-2016-3120'>https://security-tracker.debian.org/tracker/CVE-2016-3120</a>
-            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-2632'>https://security-tracker.debian.org/tracker/CVE-2015-2632</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package krb5</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
         </div>
         <div>
+            <b>Version: </b>1.12.1+dfsg-19+deb8u2
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-3119</h3>
+            <div class='low'>Severity: Low</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The process_db_args function in plugins/kdb/ldap/libkdb_ldap/ldap_principal2.c in the LDAP KDB module in kadmind in MIT Kerberos 5 (aka krb5) through 1.13.4 and 1.14.x through 1.14.1 mishandles the DB argument, which allows remote authenticated users to cause a denial of service (NULL pointer dereference and daemon crash) via a crafted request to modify a principal.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-3119'>https://security-tracker.debian.org/tracker/CVE-2016-3119</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2004-0971</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The krb5-send-pr script in the kerberos5 (krb5) package in Trustix Secure Linux 1.5 through 2.1, and possibly other operating systems, allows local users to overwrite files via a symlink attack on temporary files.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2004-0971'>https://security-tracker.debian.org/tracker/CVE-2004-0971</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2015-2694</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -302,19 +608,43 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2015-2694'>https://security-tracker.debian.org/tracker/CVE-2015-2694</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2016-3120</h3>
+            <div class='medium'>Severity: Medium</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The validate_as_request function in kdc_util.c in the Key Distribution Center (KDC) in MIT Kerberos 5 (aka krb5) before 1.13.6 and 1.4.x before 1.14.3, when restrict_anonymous_to_tgt is enabled, uses an incorrect client data structure, which allows remote authenticated users to cause a denial of service (NULL pointer dereference and daemon crash) via an S4U2Self request.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-3120'>https://security-tracker.debian.org/tracker/CVE-2016-3120</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package nettle</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 2.7.1-5+deb8u1</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2.7.1-5+deb8u1
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2016-6489</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -322,19 +652,75 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-6489'>https://security-tracker.debian.org/tracker/CVE-2016-6489</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package openldap</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2.4.40+dfsg-1+deb8u2
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2015-3276</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The nss_parse_ciphers function in libraries/libldap/tls_m.c in OpenLDAP does not properly parse OpenSSL-style multi-keyword mode cipher strings, which might cause a weaker than intended cipher to be used and allow remote attackers to have unspecified impact via unknown vectors.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-3276'>https://security-tracker.debian.org/tracker/CVE-2015-3276</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package openssl</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 1.0.1t-1+deb8u5</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1.0.1t-1+deb8u5
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2007-6755</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>The NIST SP 800-90A default statement of the Dual Elliptic Curve Deterministic Random Bit Generation (Dual_EC_DRBG) algorithm contains point Q constants with a possible relationship to certain "skeleton key" values, which might allow context-dependent attackers to defeat cryptographic protection mechanisms by leveraging knowledge of those values.  NOTE: this is a preliminary CVE for Dual_EC_DRBG; future research may provide additional details about point Q and associated attacks, and could potentially lead to a RECAST or REJECT of this CVE.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2007-6755'>https://security-tracker.debian.org/tracker/CVE-2007-6755</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2016-8610</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -342,19 +728,43 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-8610'>https://security-tracker.debian.org/tracker/CVE-2016-8610</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2010-0928</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>OpenSSL 0.9.8i on the Gaisler Research LEON3 SoC on the Xilinx Virtex-II Pro FPGA uses a Fixed Width Exponentiation (FWE) algorithm for certain signature calculations, and does not verify the signature before providing it to a caller, which makes it easier for physically proximate attackers to determine the private key via a modified supply voltage for the microprocessor, related to a "fault-based attack."</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2010-0928'>https://security-tracker.debian.org/tracker/CVE-2010-0928</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package pcre3</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 2:8.35-3.3+deb8u4</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2:8.35-3.3+deb8u4
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
             <h3>Name: CVE-2015-3217</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -362,19 +772,151 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2015-3217'>https://security-tracker.debian.org/tracker/CVE-2015-3217</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package perl</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>5.20.2-3+deb8u6
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2011-4116</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
             </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2011-4116'>https://security-tracker.debian.org/tracker/CVE-2011-4116</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2012-3878</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2012-3878'>https://security-tracker.debian.org/tracker/CVE-2012-3878</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package shadow</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1:4.2-3+deb8u1
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-6252</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-6252'>https://security-tracker.debian.org/tracker/CVE-2016-6252</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2016-6251</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-6251'>https://security-tracker.debian.org/tracker/CVE-2016-6251</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2013-4235</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2013-4235'>https://security-tracker.debian.org/tracker/CVE-2013-4235</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2007-5686</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>initscripts in rPath Linux 1 sets insecure permissions for the /var/log/btmp file, which allows local users to obtain sensitive information regarding authentication attempts.  NOTE: because sshd detects the insecure permissions and does not log certain events, this also prevents sshd from logging failed authentication attempts by remote attackers.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2007-5686'>https://security-tracker.debian.org/tracker/CVE-2007-5686</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package systemd</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 215-17+deb8u5</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>215-17+deb8u5
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2013-4392</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>systemd, when updating file permissions, allows local users to change the permissions and SELinux security contexts for arbitrary files via a symlink attack on unspecified files.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2013-4392'>https://security-tracker.debian.org/tracker/CVE-2013-4392</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2016-7796</h3>
             <div class='medium'>Severity: Medium</div>
             <div style='max-width: 500px;'>
@@ -386,19 +928,99 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-7796'>https://security-tracker.debian.org/tracker/CVE-2016-7796</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package tar</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1.27.1-2+deb8u1
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2005-2541</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>Tar 1.15.1 does not properly warn the user when extracting setuid or setgid files, which may allow local users or remote attackers to gain privileges.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2005-2541'>https://security-tracker.debian.org/tracker/CVE-2005-2541</a>
+            </p>
         </div>
     </div>
 </div>
 <div class='feature'>
     <h2 style='border-bottom: 1px solid black;'>Feature/package util-linux</h2>
-    <div>Namespace debian:8 </div>
-    <div>Version: 2.25.2-6</div>
-    <div>Added by: base:debian-jessie:11.1811161440.91eeb08</div>
-    <div>
+    <div class='details'>
         <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>2.25.2-6
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-2779</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-2779'>https://security-tracker.debian.org/tracker/CVE-2016-2779</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
+            <h3>Name: CVE-2015-5218</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>Buffer overflow in text-utils/colcrt.c in colcrt in util-linux before 2.27 allows local users to cause a denial of service (crash) via a crafted file, related to the page global variable.</p>
+            </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-5218'>https://security-tracker.debian.org/tracker/CVE-2015-5218</a>
+            </p>
+        </div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2015-5224</h3>
+            <div class='negligible'>Severity: Negligible</div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2015-5224'>https://security-tracker.debian.org/tracker/CVE-2015-5224</a>
+            </p>
+        </div>
+        <div class='vulnerability odd'>
             <h3>Name: CVE-2016-5011</h3>
             <div class='unknown'>Severity: Unknown</div>
             <div>
@@ -406,9 +1028,41 @@
               <b>No fix available</b>
             </span>
             </div>
-            <div>
+            <p>More information:
                 <a href='https://security-tracker.debian.org/tracker/CVE-2016-5011'>https://security-tracker.debian.org/tracker/CVE-2016-5011</a>
+            </p>
+        </div>
+    </div>
+</div>
+<div class='feature'>
+    <h2 style='border-bottom: 1px solid black;'>Feature/package wget</h2>
+    <div class='details'>
+        <div>
+            <b>Namespace: </b>debian:8
+        </div>
+        <div>
+            <b>Version: </b>1.16-1+deb8u1
+        </div>
+        <div>
+            <b>Added by: </b>base:debian-jessie:12.2211161148.7902b1d:d80b1ff86c953d5ee30e9fcff0f23316bff0f98c2f5c06ce15aa169bf8b1bb0d
+        </div>
+    </div>
+    <div>
+        <div class='vulnerability even'>
+            <h3>Name: CVE-2016-7098</h3>
+            <div class='low'>Severity: Low</div>
+            <div style='max-width: 500px;'>
+                <h4>Description</h4>
+                <p>Race condition in wget 1.17 and earlier, when used in recursive or mirroring mode to download a single file, might allow remote servers to bypass intended access list restrictions by keeping an HTTP connection open.</p>
             </div>
+            <div>
+            <span>
+              <b>No fix available</b>
+            </span>
+            </div>
+            <p>More information:
+                <a href='https://security-tracker.debian.org/tracker/CVE-2016-7098'>https://security-tracker.debian.org/tracker/CVE-2016-7098</a>
+            </p>
         </div>
     </div>
 </div>

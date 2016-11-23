@@ -62,6 +62,10 @@ public class DockerRegistry {
             // Clair is not fond of / in repo names since it is part of the URL
             return this.repo.replace('/', ':')
         }
+
+        public Layer lastLayer() {
+            return this.layers.last()
+        }
     }
 
     public static class Layer {
