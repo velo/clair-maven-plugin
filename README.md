@@ -1,3 +1,12 @@
+# clair-maven-plguin
+
+[![Build Status](https://travis-ci.org/velo/clair-maven-plugin.svg?branch=master)](https://travis-ci.org/velo/clair-maven-plugin?branch=master) 
+[![Coverage Status](https://coveralls.io/repos/github/velo/clair-maven-plugin/badge.svg?branch=master)](https://coveralls.io/github/velo/clair-maven-plugin?branch=master) 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/com.marvinformatics/clair-maven-plugin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/com.marvinformatics/clair-maven-plugin/) 
+[![Issues](https://img.shields.io/github/issues/velo/clair-maven-plugin.svg)](https://github.com/velo/clair-maven-plugin/issues) 
+[![Forks](https://img.shields.io/github/forks/velo/clair-maven-plugin.svg)](https://github.com/velo/clair-maven-plugin/network) 
+[![Stars](https://img.shields.io/github/stars/velo/clair-maven-plugin.svg)](https://github.com/velo/clair-maven-plugin/stargazers)
+
 Submit a Docker image to Clair for scanning
 --
 
